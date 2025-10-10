@@ -1,0 +1,10 @@
+<div class="menu-card">
+    <h2>{{plat.name}}</h2>
+    <img [src]="plat.imgUrl" [alt]="plat.name">
+    <p>{{plat.description}}</p>
+    <p>Depuis le: {{plat.createdAt}}</p>
+    <p>
+    <button (click)="onLiking()">{{btnTxtMsgLike}}</button>
+       ❤: {{plat.like}}
+    </p>
+</div>
