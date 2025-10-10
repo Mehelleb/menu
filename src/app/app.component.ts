@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
       "https://media.istockphoto.com/id/1309352410/fr/photo/cheeseburger-avec-la-tomate-et-la-laitue-sur-la-planche-en-bois.jpg?s=612x612&w=0&k=20&c=xkOJoHX-1XYVzGnCWnCQKDpsfbKT4244cE099kvDuj0=",
       "Un pain raffiné avec des sésames d'Alep",
       new Date,
-      7
+      77
     ),
     this.pizza=new Plat(
       "Pizza",
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     255
     )
     ]
-    this.plats[1].setPrice(10);
+    this.plats[1].setPrice(9.88);
     
   }
   
