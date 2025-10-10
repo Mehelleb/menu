@@ -1,9 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Plat } from '../models/plat';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-plat',
-  imports: [],
+  imports: [NgStyle],
   templateUrl: './plat.component.html',
   styleUrl: './plat.component.scss'
 })

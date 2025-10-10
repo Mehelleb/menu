@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
     "https://media.istockphoto.com/id/1442417585/fr/photo/personne-recevant-un-morceau-de-pizza-au-pepperoni-au-fromage.jpg?s=612x612&w=0&k=20&c=xNz2rodZQQARx16BlXTkht9E19aw4ziOMm6UOjW5DKM=",
     "Italienne d'âme, française de munitions, indéscriptible... ",
     new Date(),
-    17
+    255
     )
     ]
     this.plats[1].setPrice(10);

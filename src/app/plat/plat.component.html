@@ -6,6 +6,6 @@
     <p>Depuis le: {{plat.createdAt}}</p>
     <p>
     <button (click)="onLiking()">{{btnTxtMsgLike}}</button>
-       ❤: {{plat.like}}
+       <span [ngStyle]="{color: 'rgb(0,'+plat.like+', 0)'}">❤: {{plat.like}}</span>
     </p>
 </div>
