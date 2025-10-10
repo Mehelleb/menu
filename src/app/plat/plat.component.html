@@ -3,7 +3,7 @@
     @if(plat.price){<p>Prix: {{plat.price}} €</p>}@else{<p>Prix: indisponible</p>}
     <img [src]="plat.imgUrl" [alt]="plat.name">
     <p>{{plat.description}}</p>
-    <p>Depuis le: {{plat.createdAt}}</p>
+    <p>Depuis le: {{plat.createdAt | date:'dd MMMM yyyy à HH:mm'}}</p>
     <p>
     <button (click)="onLiking()">{{btnTxtMsgLike}}</button>
        <span [ngStyle]="{color: 'rgb(0,'+plat.like+', 0)'}">❤: {{plat.like}}</span>

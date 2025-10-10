@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Plat } from '../models/plat';
-import { LowerCasePipe, NgClass, NgStyle, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { LowerCasePipe, NgClass, NgStyle, TitleCasePipe, UpperCasePipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-plat',
-  imports: [NgStyle, NgClass, UpperCasePipe, TitleCasePipe, LowerCasePipe],
+  imports: [NgStyle, NgClass, UpperCasePipe, TitleCasePipe, LowerCasePipe, DatePipe],
   templateUrl: './plat.component.html',
   styleUrl: './plat.component.scss'
 })
