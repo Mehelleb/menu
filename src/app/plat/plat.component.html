@@ -1,5 +1,5 @@
 <div class="menu-card" [ngClass]="{liked:userLiked}">
-    <h2>{{plat.name}}</h2>
+    <h2>{{plat.name | uppercase}}</h2>
     @if(plat.price){<p>Prix: {{plat.price}} €</p>}@else{<p>Prix: indisponible</p>}
     <img [src]="plat.imgUrl" [alt]="plat.name">
     <p>{{plat.description}}</p>
