@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Plat } from '../models/plat';
-import { NgStyle } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-plat',
-  imports: [NgStyle],
+  imports: [NgStyle, NgClass],
   templateUrl: './plat.component.html',
   styleUrl: './plat.component.scss'
 })
@@ -18,22 +18,24 @@ ngOnInit(): void {
   this.btnTxtMsgLike="Liker";
 }
 onLiking(){
-  if(this.userLiked){
-    this.onLike();
+  if(this.userLiked){ 
+    this.unLike();
   }else{
-    this.Unlike();}
+    this.onLike();}
 }
 
 onLike():void{
+  this.userLiked=true; 
   this.plat.addLike();
   this.btnTxtMsgLike="Unliker";
-  this.userLiked=false; 
+  
 }
 
-Unlike():void{
+unLike():void{
   this.plat.removeLike();
-  this.btnTxtMsgLike="Liker"
-  this.userLiked=true;
+  this.btnTxtMsgLike="Liker";
+  this.userLiked=false; 
+ 
  }
 }
 

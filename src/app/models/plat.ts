@@ -9,10 +9,10 @@ export class Plat{
         ){}
 
 addLike():void{
-     this.like--;
+     this.like++;
 }
 removeLike():void{
-    this.like++;
+    this.like--;
 }
 setPrice(price:number):void{
     this.price=price;
