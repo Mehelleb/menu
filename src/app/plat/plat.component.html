@@ -1,5 +1,6 @@
 <div class="menu-card">
     <h2>{{plat.name}}</h2>
+    @if(plat.price){<p>Prix: {{plat.price}} €</p>}@else{<p>Prix: indisponible</p>}
     <img [src]="plat.imgUrl" [alt]="plat.name">
     <p>{{plat.description}}</p>
     <p>Depuis le: {{plat.createdAt}}</p>

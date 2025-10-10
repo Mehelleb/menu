@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
       "https://t4.ftcdn.net/jpg/06/97/54/79/360_F_697547912_nImpPVXGEFh7RXrNkpEQOy5ksAqkKW8H.jpg",
       "Une viande au choix, des frites et de la sauce fromagère.",
       new Date(),
-      10
+      10,
     );
     this.burger=new Plat(
       "Burger",
@@ -34,9 +34,10 @@ export class AppComponent implements OnInit {
     "Italienne d'âme, française de munitions, indéscriptible... ",
     new Date(),
     17
-    )
-
-   
+    );
+    this.burger.setPrice(10);
+    
   }
+  
 }
 
