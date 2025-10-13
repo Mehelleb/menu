@@ -17,4 +17,8 @@ removeLike():void{
 setPrice(price:number):void{
     this.price=price;
 }
+withPrice(price:number):Plat{
+    this.setPrice(price)
+    return this;
+}
 }
