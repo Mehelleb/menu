@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Plat } from '../models/plat';
+import { Plat } from '../../app/models/plat';
 import {NgClass, NgStyle, UpperCasePipe, DatePipe, CurrencyPipe} from '@angular/common';
 
 @Component({
