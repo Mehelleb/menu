@@ -1,10 +1,11 @@
-<div class="menu-card">
-    <h2>{{plat.name}}</h2>
+<div class="menu-card" [ngClass]="{liked:userLiked}">
+    <h2>{{plat.name | uppercase}}</h2>
+    @if(plat.price){<p>Prix: {{plat.price | currency: 'EUR':'code':'1.0-0'}} </p>}@else{<p>Prix: indisponible</p>}
     <img [src]="plat.imgUrl" [alt]="plat.name">
     <p>{{plat.description}}</p>
-    <p>Depuis le: {{plat.createdAt}}</p>
+    <p>Depuis le: {{plat.createdAt | date:'dd MMMM yyyy à HH:mm'}}</p>
     <p>
     <button (click)="onLiking()">{{btnTxtMsgLike}}</button>
-       ❤: {{plat.like}}
+       <span [ngStyle]="{color: 'rgb(0,'+plat.like+', 0)'}">❤: {{plat.like}}</span>
     </p>
 </div>
