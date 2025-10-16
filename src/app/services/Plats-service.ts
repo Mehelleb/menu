@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Plat } from "../models/plat";
+import { TypeLike } from "../models/type-like.typ";
 
 @Injectable({
     providedIn:'root'
@@ -33,4 +34,15 @@ export class PlatsService{
     getPlats():Plat[]{
         return [...this.plats]
     }
-  }
+
+    likerUnPlat(platId:string, type:TypeLike):void{
+      const platTrouve = this.plats.find(plat=>plat.id===platId);
+      if(!platTrouve){
+        throw new Error('Plat not found');
+      }
+      platTrouve.onLiked(type);
+      
+        
+      }
+    }
+  
