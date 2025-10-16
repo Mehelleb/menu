@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Plat } from '../models/plat';
+import { Plat } from '../../app/models/plat';
 import {NgClass, NgStyle, UpperCasePipe, DatePipe, CurrencyPipe} from '@angular/common';
+import { PlatsService } from '../../app/services/Plats-service';
 
 @Component({
   selector: 'app-plat',
@@ -9,8 +10,9 @@ import {NgClass, NgStyle, UpperCasePipe, DatePipe, CurrencyPipe} from '@angular/
   styleUrl: './plat.component.scss'
 })
 export class PlatComponent implements OnInit {
+  constructor(private pls:PlatsService){}
   @Input() plat!:Plat
-
+  
   userLiked!:boolean;
   btnTxtMsgLike!:string;
 ngOnInit(): void {
@@ -25,16 +27,18 @@ onLiking(){
 }
 
 onLike():void{
+  this.pls.likerUnPlat(this.plat.id, 'onLike');
   this.userLiked=true; 
-  this.plat.addLike();
   this.btnTxtMsgLike="Unliker";
+  console.log("hhhhh")
   
 }
 
 unLike():void{
-  this.plat.removeLike();
+  this.pls.likerUnPlat(this.plat.id, 'unLike');
   this.btnTxtMsgLike="Liker";
   this.userLiked=false; 
+  console.log("gggggggggggg")
  
  }
 }

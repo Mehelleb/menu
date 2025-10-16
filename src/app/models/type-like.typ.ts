@@ -1,0 +1,1 @@
+export type TypeLike = 'onLike'|'unLike';
